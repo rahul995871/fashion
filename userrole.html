@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+      integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Garments</title>
+  </head>
+  <body>
+    <div
+      class="filter d-block d-md-none"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasExample"
+      aria-controls="offcanvasExample"
+    >
+      <i class="fa-solid fa-list"></i>
+    </div>
+
+    <div
+      class="w-75 offcanvas offcanvas-start"
+      tabindex="-1"
+      id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header">
+        <a class="navbar-brand px-3" href="dashboard.html"
+          ><img class="img-fluid" src="./images/logo.png" alt=""
+        /></a>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body px-0">
+        <div class="">
+          <!-- ----- -->
+          <div class="dash-left-card">
+           
+
+            <!-- ------------ -->
+            <div class="mb-5 ">
+              <ul class="dash-list">
+                <li >
+                  <a class="d-flex text-decoration-none align-items-center gap-3 " href="adduser.html"><div class="i-card">
+                    <img src="./images/add-user.png" /> 
+                  </div>
+                  <small>Add User</small></a>
+                </li>
+                <li>
+                  <a class="d-flex text-decoration-none align-items-center gap-3" href="userlist.html"> <div class="i-card">
+                    <img src="./images/user-list.png" /> 
+                  </div> <small>User List</small></a>
+                 
+                </li>
+                <li>
+                   <a class="d-flex text-decoration-none align-items-center gap-3" href="#"> <div class="i-card">
+                    <img src="./images/add-user.png" /> 
+                  </div>
+                  <small>Add User Roll</small></a>
+                 
+                </li>
+               
+                <li class="active-list">
+                   <a class="d-flex text-decoration-none align-items-center gap-3" href="userrole.html"><div class="i-card">
+                    <img src="./images/bell1.png" /> 
+                  </div> <small>User Role List</small></a>
+                  
+                </li>
+                <li>
+                   <a class="d-flex text-decoration-none align-items-center gap-3" href="#"><div class="i-card">
+                    <img src="./images/add-category.png" /> 
+                  </div> <small>Add Category</small></a>
+                  
+                </li>
+                <li>
+                   <a class="d-flex text-decoration-none align-items-center gap-3" href="#"><div class="i-card">
+                    <img src="./images/category-list.png" /> 
+                  </div> <small>Category List</small></a>
+                  
+                </li>
+                <li>
+                   <a class="d-flex text-decoration-none align-items-center gap-3" href="#"> <div class="i-card">
+                    <img src="./images/add-product.png" /> 
+                  </div> <small>Add Product</small></a>
+                 
+                </li>
+                <li>
+                   <a class="d-flex text-decoration-none align-items-center gap-3" href="#"> <div class="i-card">
+                    <img src="./images/product-list.png" /> 
+                  </div> <small>Product List</small></a>
+                 
+                </li>
+              </ul>
+            </div>
+
+            <!-- ------------ -->
+          </div>
+          <!-- ---- -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2 py-4 px-0 left-card d-none d-md-block">
+          <!-- ----- -->
+          <div class="dash-left-card">
+            <div class="dash-user mb-5 px-1">
+              <!-- <div class="dash-img">
+            <img src="./images/user.png"/>
+        </div>
+        <div>
+            <small class="m-0">Username</small>
+        </div> -->
+        <a href="dashboard.html">  <img src="./images/logo.png" class="img-fluid" alt="" /></a>
+            </div>
+
+            <!-- ------------ -->
+            <div class="mb-5 ">
+              <ul class="dash-list">
+                <li >
+                  <a class="d-flex text-decoration-none align-items-center gap-3 " href="adduser.html"><div class="i-card">
+                    <img src="./images/add-user.png" /> 
+                  </div>
+                  <small>Add User</small></a>
+                </li>
+                <li>
+                  <a class="d-flex text-decoration-none align-items-center gap-3" href="userlist.html"> <div class="i-card">
+                    <img src="./images/user-list.png" /> 
+                  </div> <small>User List</small></a>
+                 
+                </li>
+                <li>
+                   <a class="d-flex text-decoration-none align-items-center gap-3" href="#"> <div class="i-card">
+                    <img src="./images/add-user.png" /> 
+                  </div>
+                  <small>Add User Roll</small></a>
+                 
+                </li>
+               
+                <li class="active-list">
+                   <a class="d-flex text-decoration-none align-items-center gap-3" href="userrole.html"><div class="i-card">
+                    <img src="./images/bell1.png" /> 
+                  </div> <small>User Role List</small></a>
+                  
+                </li>
+                <li>
+                   <a class="d-flex text-decoration-none align-items-center gap-3" href="#"><div class="i-card">
+                    <img src="./images/add-category.png" /> 
+                  </div> <small>Add Category</small></a>
+                  
+                </li>
+                <li>
+                   <a class="d-flex text-decoration-none align-items-center gap-3" href="#"><div class="i-card">
+                    <img src="./images/category-list.png" /> 
+                  </div> <small>Category List</small></a>
+                  
+                </li>
+                <li>
+                   <a class="d-flex text-decoration-none align-items-center gap-3" href="#"> <div class="i-card">
+                    <img src="./images/add-product.png" /> 
+                  </div> <small>Add Product</small></a>
+                 
+                </li>
+                <li>
+                   <a class="d-flex text-decoration-none align-items-center gap-3" href="#"> <div class="i-card">
+                    <img src="./images/product-list.png" /> 
+                  </div> <small>Product List</small></a>
+                 
+                </li>
+              </ul>
+            </div>
+
+            <!-- ------------ -->
+          </div>
+          <!-- ---- -->
+        </div>
+
+        <div class="col-md-10 p-0 bg-grey">
+            <div class="dash-right-card px-4 py-3 bg-p-col">
+                <div class="text-light">
+                  <h5 class="mb-0">Add User Role</h5>
+                </div>
+                <!-- <div>
+                  <div
+                    class="form-check text-light d-flex gap-1 align-items-center isactive m-0"
+                  >
+                    <input
+                      class="form-check-input "
+                      type="checkbox"
+                      value=""
+                      id="flexCheckChecked"
+                      checked
+                    />
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Is active
+                    </label>
+                  </div>
+                </div> -->
+              </div>
+          <div class="container position-relative">
+            <div class="row justify-content-center">
+              <div class="col-md-11  add-form py-4">
+               
+                <div class="row justify-content-between">
+                  <div class="col-md-5">
+                    <div class="mb-4">
+                        
+                        <input type="text" class="form-control border-0 border-bottom" id="exampleFormControlInput1" placeholder="User Role Name">
+                      </div>
+                     
+                 </div>
+
+                 <div class="col-md-5">
+                 
+                    <div class="mb-4">
+                        <div class="mb-4">
+                            <select class="js-example-basic-single w-100 " name="Category">
+                                <option value="AL">Category</option>
+                                <option value="ff">Haryana</option>
+                                <option value="WY">Noida</option>
+                                <option value="ww">Punjab</option>
+                              </select>                 
+                             </div>
+                        
+                      </div>
+                 </div>
+                </div>
+
+                <div class="user-card">
+                 
+                  <div class="user-list">
+                    <div class="user-list-tab">
+                      <div
+                        class="py-2 bg-dark text-light px-3 rounded-start"
+                      >
+                        <small class="">
+                          <input
+                            class="form-check-input  all-check text-light"
+                            id="selecctall"
+                            type="checkbox"
+                            value=""
+                          
+                           name="all"
+                        />
+                    Select All
+                    </small>
+                      </div>
+                      <div class="text-center user-data">
+                        <div class="py-2 px-3">
+                          <small class="d-flex gap-1">
+                            <input
+                              class="form-check-input all-check "
+                              type="checkbox"
+                              value=""
+                              id="user"
+                              
+                              
+                            />
+                            User
+                          </small>
+                        </div>
+                        <div class="py-2 px-3">
+                          <small class="d-flex gap-1">
+                            <input
+                              class="form-check-input all-check "
+                              type="checkbox"
+                              value=""
+                              id="userrole"
+                              checked
+                            />
+                            User Role
+                          </small>
+                        </div>
+
+                        <div class="py-2 px-3">
+                          <small class="d-flex gap-1">
+                            <input
+                              class="form-check-input all-check "
+                              type="checkbox"
+                              value=""
+                              id="product"
+                              checked
+                            />
+                            Product
+                          </small>
+                        </div>
+
+                        <div class="py-2 px-3">
+                          <small class="d-flex gap-1">
+                            <input
+                              class="form-check-input all-check "
+                              type="checkbox"
+                              value=""
+                              id="category"
+                              checked
+                            />
+                            Category
+                          </small>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="user-list-tab">
+                      <div class="py-2 bg-dark text-light text-center">
+                        <small class="">Add</small>
+                      </div>
+
+                      <div class="text-center user-data">
+                        <div class="py-2 px-4">
+                          <small class="">
+                            <input
+                              class="form-check-input all-check  user-row"
+                              type="checkbox"
+                              value=""
+                              id="flexCheckChecked"
+                              checked
+                            />
+                          </small>
+                        </div>
+                        <div class="py-2 px-4">
+                            <small class="">
+                              <input
+                                class="form-check-input all-check  userrole-row"
+                                type="checkbox"
+                                value=""
+                                id="flexCheckChecked"
+                                checked
+                              />
+                            </small>
+                          </div>
+                          <div class="py-2 px-4">
+                            <small class="">
+                              <input
+                                class="form-check-input all-check  product-row"
+                                type="checkbox"
+                                value=""
+                                id="flexCheckChecked"
+                                checked
+                              />
+                            </small>
+                          </div>
+                          <div class="py-2 px-4">
+                            <small class="">
+                              <input
+                                class="form-check-input all-check  category-row"
+                                type="checkbox"
+                                value=""
+                                id="flexCheckChecked"
+                                checked
+                              />
+                            </small>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="user-list-tab">
+                      <div class="py-2 bg-dark text-light text-center">
+                        <small class="">Edit</small>
+                      </div>
+                      <div class="text-center user-data">
+                        <div class="py-2 px-4">
+                          <small class="">
+                            <input
+                              class="form-check-input all-check  user-row"
+                              type="checkbox"
+                              value=""
+                              id="flexCheckChecked"
+                              checked
+                            />
+                          </small>
+                        </div>
+                        <div class="py-2 px-4">
+                            <small class="">
+                              <input
+                                class="form-check-input all-check  userrole-row"
+                                type="checkbox"
+                                value=""
+                                id="flexCheckChecked"
+                                checked
+                              />
+                            </small>
+                          </div>
+                          <div class="py-2 px-4">
+                            <small class="">
+                              <input
+                                class="form-check-input all-check  product-row"
+                                type="checkbox"
+                                value=""
+                                id="flexCheckChecked"
+                                checked
+                              />
+                            </small>
+                          </div>
+                          <div class="py-2 px-4">
+                            <small class="">
+                              <input
+                                class="form-check-input all-check  category-row"
+                                type="checkbox"
+                                value=""
+                                id="flexCheckChecked"
+                                checked
+                              />
+                            </small>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="user-list-tab">
+                      <div class="py-2 bg-dark text-light text-center">
+                        <small class="">Delete</small>
+                      </div>
+                      <div class="text-center user-data">
+                        <div class="py-2 px-4">
+                          <small class="">
+                            <input
+                              class="form-check-input all-check  user-row"
+                              type="checkbox"
+                              value=""
+                              id="flexCheckChecked"
+                              checked
+                            />
+                          </small>
+                        </div>
+                        <div class="py-2 px-4">
+                            <small class="">
+                              <input
+                                class="form-check-input all-check  userrole-row"
+                                type="checkbox"
+                                value=""
+                                id="flexCheckChecked"
+                                checked
+                              />
+                            </small>
+                          </div>
+                          <div class="py-2 px-4">
+                            <small class="">
+                              <input
+                                class="form-check-input all-check  product-row"
+                                type="checkbox"
+                                value=""
+                                id="flexCheckChecked"
+                                checked
+                              />
+                            </small>
+                          </div>
+                          <div class="py-2 px-4">
+                            <small class="">
+                              <input
+                                class="form-check-input all-check  category-row"
+                                type="checkbox"
+                                value=""
+                                id="flexCheckChecked"
+                                checked
+                              />
+                            </small>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="user-list-tab">
+                      <div
+                        class="py-2 bg-dark text-light text-center "
+                      >
+                        <small class="">View</small>
+                      </div>
+                      <div class="text-center user-data">
+                        <div class="py-2 px-4">
+                          <small class="">
+                            <input
+                              class="form-check-input all-check  user-row"
+                              type="checkbox"
+                              value=""
+                              id="flexCheckChecked"
+                              checked
+                            />
+                          </small>
+                        </div>
+                        <div class="py-2 px-4">
+                            <small class="">
+                              <input
+                                class="form-check-input all-check  userrole-row"
+                                type="checkbox"
+                                value=""
+                                id="flexCheckChecked"
+                                checked
+                              />
+                            </small>
+                          </div>
+                          <div class="py-2 px-4">
+                            <small class="">
+                              <input
+                                class="form-check-input all-check  product-row"
+                                type="checkbox"
+                                value=""
+                                id="flexCheckChecked"
+                                checked
+                              />
+                            </small>
+                          </div>
+                          <div class="py-2 px-4">
+                            <small class="">
+                              <input
+                                class="form-check-input all-check  category-row"
+                                type="checkbox"
+                                value=""
+                                id="flexCheckChecked"
+                                checked
+                              />
+                            </small>
+                          </div>
+                      </div>
+                      
+                    </div>
+
+                    <div class="user-list-tab">
+                      <div
+                        class="py-2 bg-dark text-light text-center rounded-end"
+                      >
+                        <small class="">Miscellaneous</small>
+                      </div>
+                      <div class="text-center user-data">
+                        <div class="py-2 px-4">
+                          <small class="">
+                            <input
+                              class="form-check-input all-check  user-row"
+                              type="checkbox"
+                              value=""
+                              id="flexCheckChecked"
+                              checked
+                            />
+                          </small>
+                        </div>
+                        <div class="py-2 px-4">
+                            <small class="">
+                              <input
+                                class="form-check-input all-check  userrole-row"
+                                type="checkbox"
+                                value=""
+                                id="flexCheckChecked"
+                                checked
+                              />
+                            </small>
+                          </div>
+                          <div class="py-2 px-4">
+                            <small class="">
+                              <input
+                                class="form-check-input all-check  product-row"
+                                type="checkbox"
+                                value=""
+                                id="flexCheckChecked"
+                                checked
+                              />
+                            </small>
+                          </div>
+                          <div class="py-2 px-4">
+                            <small class="">
+                              <input
+                                class="form-check-input all-check  category-row"
+                                type="checkbox"
+                                value=""
+                                id="flexCheckChecked"
+                                checked
+                              />
+                            </small>
+                          </div>
+                      </div>
+                      
+                    </div>
+                    
+                  </div>
+                  
+               
+                </div>
+                <div class="form-btn mt-4 text-end pt-2">
+                    <a href="#">SAVE</a>
+                </div>
+            <!-- --   -->
+            </div>
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+   
+  </body>
+
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"
+  ></script>
+  <script src="./index.js"></script>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+    integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"
+    integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <script>
+    AOS.init();
+  </script>
+  <script>
+    // In your Javascript (external .js resource or <script> tag)
+    $(document).ready(function () {
+      $(".js-example-basic-single").select2();
+    });
+  </script>
+</html>
