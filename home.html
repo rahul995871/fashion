@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Garments</title>
+  </head>
+  <body>
+    <div
+      class="filter d-block d-md-none"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasExample"
+      aria-controls="offcanvasExample"
+    >
+      <i class="fa-solid primary-col fa-list"></i>
+    </div>
+
+    <div
+      class="w-75 offcanvas offcanvas-start"
+      tabindex="-1"
+      id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header">
+        <a class="navbar-brand px-3" href="dashboard.html"
+          ><img class="img-fluid" src="./images/logo.png" alt=""
+        /></a>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body px-0">
+        <div class="">
+          <!-- ----- -->
+          <div class="dash-left-card">
+            
+
+            <!-- ------------ -->
+            <div class="mb-5 ">
+              <ul class="dash-list">
+                <li class="active-list">
+                  <a class="d-flex text-decoration-none align-items-center gap-3 " href="adduser.html"><div class="i-card">
+                    <img src="./images/add-user.png" /> 
+                  </div>
+                  <small>Add User</small></a>
+                </li>
+                <li>
+                  <a class="d-flex text-decoration-none align-items-center gap-3" href="userlist.html"> <div class="i-card">
+                    <img src="./images/user-list.png" /> 
+                  </div> <small>User List</small></a>
+                 
+                </li>
+                <li>
+                   <a class="d-flex text-decoration-none align-items-center gap-3" href="#"> <div class="i-card">
+                    <img src="./images/add-user.png" /> 
+                  </div>
+                  <small>Add User Roll</small></a>
+                 
+                </li>
+               
+                <li>
+                   <a class="d-flex text-decoration-none align-items-center gap-3" href="userrole.html"><div class="i-card">
+                    <img src="./images/bell1.png" /> 
+                  </div> <small>User Role List</small></a>
+                  
+                </li>
+                <li>
+                   <a class="d-flex text-decoration-none align-items-center gap-3" href="#"><div class="i-card">
+                    <img src="./images/add-category.png" /> 
+                  </div> <small>Add Category</small></a>
+                  
+                </li>
+                <li>
+                   <a class="d-flex text-decoration-none align-items-center gap-3" href="#"><div class="i-card">
+                    <img src="./images/category-list.png" /> 
+                  </div> <small>Category List</small></a>
+                  
+                </li>
+                <li>
+                   <a class="d-flex text-decoration-none align-items-center gap-3" href="#"> <div class="i-card">
+                    <img src="./images/add-product.png" /> 
+                  </div> <small>Add Product</small></a>
+                 
+                </li>
+                <li>
+                   <a class="d-flex text-decoration-none align-items-center gap-3" href="#"> <div class="i-card">
+                    <img src="./images/product-list.png" /> 
+                  </div> <small>Product List</small></a>
+                 
+                </li>
+              </ul>
+            </div>
+
+            <!-- ------------ -->
+          </div>
+          <!-- ---- -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid" style="background-color: #f9f9f9;">
+      <div class="row">
+        <div class="col-md-2 py-4 px-0  d-none d-md-block" style="box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;">
+          <!-- ----- -->
+          <div class="dash-left-card">
+            <div class="dash-user mb-4 px-1 justify-content-center">
+              <!-- <div class="dash-img">
+            <img src="./images/user.png"/>
+        </div>
+        <div>
+            <small class="m-0">Username</small>
+        </div> -->
+        <a href="dashboard.html">  <img src="./images/logo.png" class="img-fluid my-2" alt="" style="height: 40px;"/></a>
+            </div>
+
+            <!-- ------------ -->
+            <div class="mb-5 ">
+              <ul class="dash-list dash-list2">
+                <li  style="box-shadow: none;">
+                  <a class="d-flex text-decoration-none align-items-center gap-3  " href="adduser.html"><div class="i-card3">
+                    <img src="./images/add-user-w.png" /> 
+                  </div>
+                  <small class="">Add User</small></a>
+                </li>
+                <li    style="box-shadow: none;">
+                  <a class="d-flex text-decoration-none align-items-center gap-3 " href="userlist.html"> <div class="i-card3">
+                    <img src="./images/user-list-w.png" /> 
+                  </div> <small>User List</small></a>
+                 
+                </li>
+                <li  style="box-shadow: none;">
+                   <a class="d-flex text-decoration-none align-items-center gap-3 " href="#"> <div class="i-card3">
+                    <img src="./images/add-user-w.png" /> 
+                  </div>
+                  <small>Add User Roll</small></a>
+                 
+                </li>
+               
+                <li  style="box-shadow: none;">
+                   <a class="d-flex text-decoration-none align-items-center gap-3 " href="userrole.html"><div class="i-card3">
+                    <img src="./images/bell-w.png" /> 
+                  </div> <small>User Role List</small></a>
+                  
+                </li>
+                <li  style="box-shadow: none;">
+                   <a class="d-flex text-decoration-none align-items-center gap-3 " href="#"><div class="i-card3">
+                    <img src="./images/add-category-w.png" /> 
+                  </div> <small>Add Category</small></a>
+                  
+                </li>
+                <li  style="box-shadow: none;">
+                   <a class="d-flex text-decoration-none align-items-center gap-3 " href="#"><div class="i-card3">
+                    <img src="./images/category-list-w.png" /> 
+                  </div> <small>Category List</small></a>
+                  
+                </li>
+                <li  style="box-shadow: none;">
+                   <a class="d-flex text-decoration-none align-items-center gap-3 " href="#"> <div class="i-card3">
+                    <img src="./images/add-product-w.png" /> 
+                  </div> <small>Add Product</small></a>
+                 
+                </li>
+                <li  style="box-shadow: none;">
+                   <a class="d-flex text-decoration-none align-items-center gap-3 " href="#"> <div class="i-card3">
+                    <img src="./images/product-list-w.png" /> 
+                  </div> <small>Product List</small></a>
+                 
+                </li>
+              </ul>
+            </div>
+
+            <!-- ------------ -->
+          </div>
+          <!-- ---- -->
+        </div>
+
+        <div class="col-md-10 p-0 aa" >
+          <!-- <div>
+            <img src="./images/blob.svg" alt="">
+          </div> -->
+          
+          <div class="container  position-relative ">
+           
+            <div class="row justify-content-center bb">
+              <div class="col-md-11 add-form mt-md-5 mt-4 pt-1">
+               
+                <div class="row justify-content-between user-card position-relative p-2 pt-5 p-md-5">
+                  <div class="mb-5 tag-line">
+                    <h5 class="px-2 mb-0 c-title position-relative">Add User</h5>
+                  </div>
+                      <div class="col-md-5">
+                        <div class="mb-5 sign-form-inp" >
+                            <label for="exampleInputEmail1" class="form-label"
+                              ><i class="fa-solid primary-col fa-user"></i></label
+                            >
+                            <input
+                              type="text"
+                              placeholder="Username"
+                              class="form-control "
+                             
+                              id="exampleInputEmail1"
+                              aria-describedby="emailHelp"
+                            />
+                          </div>
+                    </div>
+    
+
+                 <div class="col-md-5">
+                 
+                    
+                        <div class="mb-5 sign-form-inp  admin-select">
+                          <label for="exampleInputEmail1" class="form-label"
+                              ><i class="fa-solid primary-col fa-user"></i></label
+                            >
+                            <select class="js-example-basic-single w-100 c-select admin-select" name="state">
+                              
+                                <option value="AL">Delhi</option>
+                                <option value="ff">Haryana</option>
+                                <option value="WY">Noida</option>
+                                <option value="ww">Punjab</option>
+                              </select>                 
+                             </div>
+                    
+                 </div>
+
+                 <div class="col-5">
+                  <div class="mb-4 sign-form-inp ">
+                      <label for="exampleInputEmail1" class="form-label"
+                        ><i class="fa-solid primary-col fa-envelope"></i></label
+                      >
+                      <input
+                        type="email"
+                        placeholder="Email"
+                        class="form-control"
+                        id="exampleInputEmail1"
+                       
+                        aria-describedby="emailHelp"
+                      />
+                    </div>
+              </div>
+ 
+                  <div class="col-5">
+                    <div class="mb-4 sign-form-inp ">
+                        <label for="exampleInputEmail1" class="form-label"
+                          ><i class="fa-solid primary-col fa-phone"></i></label
+                        >
+                        <input
+                          type="number"
+                          placeholder="Phone Number"
+                          class="form-control"
+                          id="exampleInputEmail1"
+                         
+                          aria-describedby="emailHelp"
+                        />
+                      </div>
+                </div>
+
+                 <!-- ------------- -->
+<div class="d-flex justify-content-between align-items-center my-4 my-md-3">
+  <div>
+      <div class="form-check text-dark d-flex gap-2 align-items-center isactive m-0 mx-1">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+          <label class="form-check-label" for="flexCheckChecked">
+           Is active
+          </label>
+        </div>
+     </div>
+  <div class="form-btn text-end ">
+      <a href="#">SUBMIT</a>
+  </div>
+</div>
+<!-- --------------- -->
+                  
+                </div>
+               
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+  </body>
+
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"
+  ></script>
+  <script src="./index.js"></script>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+    integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script>
+    AOS.init();
+  </script>
+    <script>
+        // In your Javascript (external .js resource or <script> tag)
+    $(document).ready(function() {
+        $('.js-example-basic-single').select2();
+    });
+      </script>
+</html>
